@@ -1,0 +1,7 @@
+.idea/
+lib/
+project/
+target/
+
+src/main/resources/data/
+aws.conf
