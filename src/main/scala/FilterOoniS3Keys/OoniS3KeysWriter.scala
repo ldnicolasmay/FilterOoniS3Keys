@@ -1,9 +1,9 @@
-package OoniKeys
+package FilterOoniS3Keys
 
 import java.io.File
 
-import OoniKeys.OoniConfig._
-import OoniKeys.PersistentS3Client._
+import FilterOoniS3Keys.OoniConfig._
+import FilterOoniS3Keys.PersistentS3Client._
 import com.amazonaws.AmazonServiceException
 import com.amazonaws.services.s3.model.{ListObjectsRequest, ObjectListing}
 
