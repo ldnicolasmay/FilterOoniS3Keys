@@ -2,7 +2,7 @@
 
 ## Overview
 
-This app is one of three that fits into a data pipeline for a larger project, an Open Observatory of Network Intereference (OONI) data ETL project. 
+This app is the first of three that fits into a data pipeline for a larger project, an Open Observatory of Network Intereference (OONI) Data Lake project. 
 
 ## Purpose
 

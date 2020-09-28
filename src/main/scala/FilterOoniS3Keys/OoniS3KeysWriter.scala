@@ -102,6 +102,11 @@ object OoniS3KeysWriter {
     }
   }
 
+  /**
+   * Driver for OoniS3KeysWriter Spark app
+   *
+   * @param args Arguments passed to main method
+   */
   def main(args: Array[String]): Unit = {
 
     // Create filter predicate from OONI target test names defined in ooni.conf
@@ -124,8 +129,8 @@ object OoniS3KeysWriter {
     // Write text files in parallel to target S3 bucket
     val targetBucketName: String = "udacity-ooni-project"
     val targetKeyPrefix: String = "keys"
-    ooniPrefixDates.par.foreach { date =>
-      writeS3KeysToTargetS3(wd, targetBucketName, targetKeyPrefix)(date)
+    filteredKeysMap.par.foreach {
+      case (date, _) => writeS3KeysToTargetS3(wd, targetBucketName, targetKeyPrefix)(date)
     }
 
   }
